@@ -1,9 +1,11 @@
-const express = require('express')
+const express = require("express");
 
-const router = express.Router()
+const router = express.Router();
 
-const doctorsController = require('../controllers/doctors.controller')
-const cryptoController = require('../controllers/crypto.controller')
+const doctorsController = require("../controllers/doctors.controller");
+const cryptoController = require("../controllers/crypto.controller");
+const hashController = require("../controllers/hash.controller");
+const blockchainController = require("../controllers/blockchain.controller");
 
 // const {
 //   createPricing,
@@ -34,4 +36,4 @@ const cryptoController = require('../controllers/crypto.controller')
 //   viewPricings
 // )
 
-module.exports = router
+module.exports = router;
