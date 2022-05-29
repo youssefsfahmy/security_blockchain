@@ -1,0 +1,13 @@
+{
+  "patientNationalid": 12345678901234,
+  "hash": "331f6eaf6bbdf2ff4d96c32087b534b2551879a146e95a028f1e46544ff292f3",
+  "previosHash": "4c2de8f106a70707e13dcc30cd289f8e88338732b512661610d1ac457b50a3c1",
+  "pointerHash": "43e4164e031976c71a3e4aedf6d7343390ad9147301f453bd058aab8ba3ab2cb",
+  "pointer": 1,
+  "block": {
+    "signature": "PiqnOCp12gTJ22QEU/Osen6pxLabzP0wWNIXS3NCVs5BaAMZqzML01hzX67RMMLfXWEXeuikLCA7xNyVY0O5gok15Mp5CubIrwOX0lLq1hhoIW+D31TVDeBkS3voQS0g9WdZSUQ16eg17WYzzhIKj0YElxsWjJqqZ9IyDg4QM0I=",
+    "encryptedKey": "awkFcPlKotX54GvFeCVK8KhyoR4r4mfljQfICWLRLJ9laEz8ZK3MmQefxi0bn7pBn5FaNfRQGuPGda8U+UEXqjNVV5WDL8z0UylrMYyM4o9/zChZkVfj/XjAP3wJpJwtBdjK+YX/1YkxrwhbTra5a7DQuUX9C15u5U6tbaTuuvg=",
+    "encryptedVisitData": "NoxqxI3kkttyCVfAAJFPpCJoym52k2Q7fioMLCObOEHEZEiR6sJPgla0dumLKG5ybPO9furDDK8XU+db9L5Rr82vMp5FxiALxQ9gZIR897CO47DvZASfmNEjFilQp4fCt0poFtyacICI5Uk3MkbscqjD79OicXVeo3KqyQmQORv0mfe4hy4ucPZAHj8hey0yHfBfc8lV5L3QbP8RJdblwe38x9liYc72B8DzG3XDOg/XwI1hd3GzGogjLwuKDxFu6jTBGReEc3fJEZgxj4Tm1mR1WTJKh8OHKsbuy07LOtly8zzukU+LuhGX1n/UYUfjpKJn51z9yp1hYw8Uz+WNYQ==",
+    "doctorid": 1
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "patientNationalid": 12345678901235,
+  "hash": "763e0c2a40a4345f157bbcdccc0958bad1a5c4f395be1fb9a6ad78b70092cc74",
+  "previosHash": "43e4164e031976c71a3e4aedf6d7343390ad9147301f453bd058aab8ba3ab2cb",
+  "block": {
+    "signature": "j1jztwwzsWjLCFuD5wVUr/pNAMbXx/oBkqp8P5uVd93AD7QNv5yP4beGqe26eeIVxgaeUhya/hOO8s/8pHRS66iF88i+wgaB1fjhBTblEh7q/mj7Pgr1OUc58QgVH3MefkXDKI6NN4eIs1ndt/Zv5sSfXKXKmssZm0r5/amg2ck=",
+    "encryptedKey": "KgyE4ENrj2nXPmuBteSB7RYAUZeinO24YoJ1wQ9Ltckv8btPttKhzs5wVV4xfAwtQbksY4yN3DnibyvkZj8Qe04gVuEM2luzCCUf7h8+x2pKJ2d7YtGrzQNTZ8vmdu1MeHYveaUPMnKh2qeZajUfgRHm/nSUA1aMX/lUV0V4u7Y=",
+    "encryptedPatientData": "NoxqxI3kkttyCVfAAJFPpIfB1OHCYaAGt+Uj4e4Y8271oMOt4Jwx5GDHSgwYm7NoShACh2KIiZ0HfmLt+PlE3xy9MB15E90dvOI4K4ZvZHoyxY/hcpYm1v0u1hnCW/RG/gBfG5rcWgJyPoEDIjInXw==",
+    "doctorid": 1
+  }
+}

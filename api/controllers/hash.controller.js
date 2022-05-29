@@ -7,7 +7,10 @@ const createHash = (data) => {
 
 const checkHash = (data, hash) => {
   const hash2 = crypto.createHash("sha256").update(data).digest("hex");
+  console.log(data);
+  console.log(hash);
+  console.log(hash2);
   return hash == hash2;
 };
 
-module.export = { createHash, checkHash };
+module.exports = { createHash, checkHash };
