@@ -12,8 +12,22 @@ var callback = function (err) {
   }
   console.log("JSON file has been saved.");
 };
-const newPatientBlock = async (block, patientNationalid) => {
+const newPatientBlock = async (block, patientNationalid, res) => {
   counter = authjson.counter;
+
+  for (let index = counter - 1; 0 <= index; index--) {
+    const data = await fs.readFile(
+      `blockchain/blockchain_${index}.json`,
+      "utf8"
+    );
+
+    obj = JSON.parse(data); //now it an object
+
+    if (obj.patientNationalid == patientNationalid) {
+      res.send("Patient already exists");
+      return;
+    }
+  }
 
   if (counter == 0) {
     const hash = createHash(JSON.stringify(block));

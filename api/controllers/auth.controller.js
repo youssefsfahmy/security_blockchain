@@ -46,7 +46,7 @@ const verifyNewPatient = async (req, res) => {
         encryptedPatientData,
         doctorid,
       };
-      await newPatientBlock(block, JSON.parse(patientData).nationalid);
+      await newPatientBlock(block, JSON.parse(patientData).nationalid, res);
       res.send(patientData);
     }
   } catch (err) {
