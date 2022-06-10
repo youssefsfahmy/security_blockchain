@@ -99,7 +99,6 @@ const verifyRequest = async (req, res) => {
 
     const publicKeyDoctor = await getPublicKey(doctorid);
     const privateKeyAuth = await getPrivateKeyAuth();
-
     const verified = await verify(publicKeyDoctor, signature, encryptedKey);
     if (!verified) {
       res.send({ error: "YOU ARE NOT THE DOCTOR YA KADAB" });
@@ -110,13 +109,11 @@ const verifyRequest = async (req, res) => {
         encryptedRequest,
         symmetricKey
       );
-      console.log(JSON.parse(requestData).patientNationalid);
       visitArr = await getPatient(
         JSON.parse(requestData).patientNationalid,
         req.body.doctorid,
         res
       );
-      console.log("visitArr");
       const block = {
         signature,
         encryptedKey,
@@ -128,8 +125,9 @@ const verifyRequest = async (req, res) => {
       //   JSON.parse(requestData).patientNationalid,
       //   res
       // );
-
-      res.send(visitArr);
+      if (visitArr) {
+        res.send(visitArr);
+      }
     }
   } catch (err) {
     res.send(err);

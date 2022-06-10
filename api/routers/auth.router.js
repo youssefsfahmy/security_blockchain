@@ -8,7 +8,6 @@ const {
   verifyRequest,
 } = require("../controllers/auth.controller");
 const { checkAllBlockchain } = require("../controllers/blockchain.controller");
-// const {} = require("../controllers/test2");
 
 const {
   validateNewPatient,

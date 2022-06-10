@@ -8,7 +8,7 @@ const { createHash, checkHash } = require("./hash.controller");
 var callback = function (err) {
   if (err) {
     console.log("An error occured while writing JSON Object to File.");
-    return console.log(err);
+    return;
   }
   console.log("JSON file has been saved.");
 };
@@ -89,15 +89,11 @@ const newPatientBlock = async (block, patientNationalid, res) => {
 const newVisitBlock = async (block, patientNationalid, res) => {
   counter = authjson.counter;
   let prevBlockId = -1;
-  console.log(counter);
   for (let index = counter - 1; 0 <= index; index--) {
-    console.log("toot");
-
     const data = await fs.readFile(
       `blockchain/blockchain_${index}.json`,
       "utf8"
     );
-    console.log("toota");
 
     obj = JSON.parse(data); //now it an object
 
@@ -107,9 +103,7 @@ const newVisitBlock = async (block, patientNationalid, res) => {
     }
   }
 
-  console.log(prevBlockId);
   if (prevBlockId == -1) {
-    console.log("hena");
     res.send("error yahbal");
   } else {
     const hash = createHash(JSON.stringify(block));
@@ -145,7 +139,6 @@ const newVisitBlock = async (block, patientNationalid, res) => {
 
   return true;
 };
-
 async function getHash(counter) {
   const data = await fs.readFile(
     `blockchain/blockchain_${counter}.json`,
@@ -155,11 +148,7 @@ async function getHash(counter) {
 
   return obj.hash;
 }
-
 async function getPatient(patientNationalid, doctorid, res) {
-  console.log(patientNationalid);
-  console.log(doctorid);
-
   counter = authjson.counter;
   const visitArr = [];
   let foundVisit = null;
@@ -180,24 +169,29 @@ async function getPatient(patientNationalid, doctorid, res) {
       break;
     }
   }
-  console.log(foundVisit.pointer);
   flag = true;
   while (flag) {
     if (foundVisit.pointer == null) {
-      console.log("toot");
       visitArr.push(foundVisit.block.encryptedPatientData);
       flag = false;
       break;
     } else {
-      console.log("toota");
       visitArr.push(foundVisit.block.encryptedVisitData);
 
       const data = await fs.readFile(
         `blockchain/blockchain_${foundVisit.pointer}.json`,
         "utf8"
       );
+      const hashPointer = foundVisit.pointerHash;
 
       foundVisit = JSON.parse(data); //now it an object
+      isValid = checkHash(JSON.stringify(foundVisit.block), foundVisit.hash);
+
+      if (!isValid || foundVisit.hash != hashPointer) {
+        res.send("Breach");
+
+        return null;
+      }
     }
   }
 
